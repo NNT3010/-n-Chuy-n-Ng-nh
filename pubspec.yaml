@@ -1,0 +1,49 @@
+name: mebecare
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  intl: ^0.20.2
+  firebase_core: ^3.1.1
+  cloud_firestore: ^5.1.0
+  firebase_auth: ^5.1.1
+  http: ^1.2.0
+  google_generative_ai: ^0.4.3
+  fl_chart: ^0.66.0
+  firebase_storage: ^12.1.0
+  image_picker: ^1.1.2
+  url_launcher: ^6.3.0
+  flutter_html: ^3.0.0
+  mailer: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+# 👇 Thêm đoạn cấu hình này ở cuối cùng của file (thẳng hàng với dev_dependencies)
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon.png" # 👈 Đảm bảo đường dẫn này đúng với file ảnh bạn vừa copy
+  min_sdk_android: 21 # Giữ nguyên để hỗ trợ tốt các dòng Android mới
+  # adaptive_icon_background: "#FF4081" # (Tùy chọn) Màu nền nếu dùng icon thích ứng
+  # adaptive_icon_foreground: "assets/icon_foreground.png" # (Tùy chọn) Ảnh tiền cảnh
+
+flutter:
+  uses-material-design: true
+
+  # 👉 KHAI BÁO ẢNH TẠI ĐÂY (chuẩn)
+  assets:
+    - assets/images/pregnancy/

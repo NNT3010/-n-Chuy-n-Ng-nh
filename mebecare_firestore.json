@@ -1,0 +1,185 @@
+{
+  "users": {
+    "_structure": {
+      "FirstName": "string",
+      "LastName": "string",
+      "Email": "string",
+      "Phone": "string",
+      "PasswordHash": "string",
+      "Role": "string",
+      "DateOfBirth": "date",
+      "Address": "string",
+      "CreatedAt": "timestamp",
+      "UpdatedAt": "timestamp",
+      "children": {
+        "_structure": {
+          "FirstName": "string",
+          "LastName": "string",
+          "DateOfBirth": "date",
+          "Gender": "string",
+          "CreatedAt": "timestamp",
+          "UpdatedAt": "timestamp",
+          "growth_records": {
+            "_structure": {
+              "RecordDate": "date",
+              "Weight": "number",
+              "Height": "number",
+              "HeadCircumference": "number",
+              "Notes": "string",
+              "CreatedAt": "timestamp",
+              "UpdatedAt": "timestamp"
+            }
+          },
+          "vaccination_records": {
+            "_structure": {
+              "VaccineName": "string",
+              "VaccinationDate": "date",
+              "Status": "string",
+              "Notes": "string",
+              "CreatedAt": "timestamp",
+              "UpdatedAt": "timestamp"
+            }
+          }
+        }
+      },
+      "pregnancy_records": {
+        "_structure": {
+          "Week": "int",
+          "StartDate": "date",
+          "Weight": "number",
+          "BloodPressure": "string",
+          "Notes": "string",
+          "CreatedAt": "timestamp",
+          "UpdatedAt": "timestamp"
+        }
+      },
+      "expenses": {
+        "_structure": {
+          "Category": "string",
+          "Amount": "number",
+          "ExpenseDate": "date",
+          "Notes": "string",
+          "CreatedAt": "timestamp",
+          "UpdatedAt": "timestamp"
+        }
+      },
+      "activity_logs": {
+        "_structure": {
+          "ActivityType": "string",
+          "ActivityData": "string",
+          "CreatedAt": "timestamp"
+        }
+      }
+    }
+  },
+
+  "experts": {
+    "_structure": {
+      "UserID": "int",
+      "Field": "string",
+      "Degree": "string",
+      "ExperienceYears": "int",
+      "Bio": "string",
+      "ProfilePicture": "string",
+      "CreatedAt": "timestamp",
+      "UpdatedAt": "timestamp"
+    }
+  },
+
+  "doctors": {
+    "_structure": {
+      "UserID": "int",
+      "Specialty": "string",
+      "Hospital": "string",
+      "Bio": "string",
+      "CreatedAt": "timestamp",
+      "UpdatedAt": "timestamp"
+    }
+  },
+
+  "articles": {
+    "_structure": {
+      "Title": "string",
+      "Content": "string",
+      "ImageUrl": "string",
+      "VideoUrl": "string",
+      "AuthorID": "int",
+      "Category": "string",
+      "CreatedAt": "timestamp",
+      "UpdatedAt": "timestamp"
+    }
+  },
+
+  "medical_services": {
+    "_structure": {
+      "Name": "string",
+      "Type": "string",
+      "Address": "string",
+      "Phone": "string",
+      "Rating": "number",
+      "Description": "string",
+      "CreatedAt": "timestamp",
+      "UpdatedAt": "timestamp"
+    }
+  },
+
+  "community_posts": {
+    "_structure": {
+      "UserID": "int",
+      "Title": "string",
+      "Content": "string",
+      "CreatedAt": "timestamp",
+      "UpdatedAt": "timestamp",
+      "comments": {
+        "_structure": {
+          "UserID": "int",
+          "Content": "string",
+          "CreatedAt": "timestamp",
+          "UpdatedAt": "timestamp"
+        }
+      }
+    }
+  },
+
+  "contact_messages": {
+    "_structure": {
+      "FullName": "string",
+      "Email": "string",
+      "Phone": "string",
+      "Subject": "string",
+      "ChildAge": "string",
+      "Message": "string",
+      "AdminReply": "string",
+      "SentAt": "timestamp",
+      "RepliedAt": "timestamp",
+      "UserID": "int",
+      "AdminID": "int",
+      "IsRead": "boolean",
+      "IsReplied": "boolean",
+      "Reply": "string",
+      "CreatedAt": "timestamp",
+      "UpdatedAt": "timestamp"
+    }
+  },
+
+  "notifications": {
+    "_structure": {
+      "UserID": "int",
+      "Title": "string",
+      "Content": "string",
+      "IsRead": "boolean",
+      "CreatedAt": "timestamp"
+    }
+  },
+
+  "medical_records": {
+    "_structure": {
+      "UserID": "int",
+      "ChildID": "int",
+      "RecordType": "string",
+      "Description": "string",
+      "CreatedAt": "timestamp",
+      "UpdatedAt": "timestamp"
+    }
+  }
+}

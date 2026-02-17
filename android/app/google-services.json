@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1032235838169",
+    "project_id": "mebecare-c2cfc",
+    "storage_bucket": "mebecare-c2cfc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032235838169:android:0ad8d8889cff06a62facc8",
+        "android_client_info": {
+          "package_name": "com.example.mebecare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoqqMAIzr25bfrxKpsnKh5rKUY6OQ2mc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

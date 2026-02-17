@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mebecare">
+
+    <!-- 🔥 QUYỀN TRUY CẬP ẢNH + CAMERA --><uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name="${applicationName}"
+        android:label="MeBeCare"
+        android:icon="@mipmap/launcher_icon">
+
+        <activity
+            android:name="com.example.mebecare.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize"
+            android:taskAffinity=""
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode">
+
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <meta-data android:name="flutterEmbedding" android:value="2"/>
+
+    </application>
+
+    <!-- 🔥 ĐÃ SỬA: Gộp tất cả vào trong 1 thẻ <queries> duy nhất -->
+    <queries>
+        <!-- 1. Cho phép xử lý văn bản (Mặc định của Flutter) -->
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+
+        <!-- 2. Intent để gửi email (mailto) -->
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+
+        <!-- 3. Intent để mở ứng dụng Gmail trực tiếp (googlegmail) -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="googlegmail" />
+        </intent>
+
+        <!-- 👇👇👇 3. THÊM DÒNG NÀY ĐỂ GỌI ĐIỆN 👇👇👇 -->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+            <data android:scheme="tel" />
+        </intent>
+        <!-- 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆 -->
+
+        <!-- (Tùy chọn) Nếu bạn muốn mở bản đồ thì thêm cái này -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
+</manifest>
